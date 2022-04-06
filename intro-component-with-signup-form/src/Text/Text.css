@@ -1,8 +1,11 @@
 .text {
   text-align: center;
+  margin-top: 95px;
+  margin-bottom: 30px;
 }
 .text h1 {
-  margin-bottom: 30px;
+  margin-bottom: 37px;
+  font-size: 38px;
 }
 @media (min-width: 600px) {
   .text {
