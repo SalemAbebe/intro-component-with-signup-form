@@ -14,23 +14,23 @@ body {
   color: #fff;
   height: 100vh;
 }
-.App {
-  height: 100vh;
-  align-items: center;
-}
-/* .container-wrapper {
-  align-items: center;
-} */
+
 .intro-component {
-  margin: 95px 130px;
+  width: 90%;
+  margin: auto;
   /* align-items: center; */
 }
 
 @media (min-width: 600px) {
   body {
     background-image: url(../public/images/bg-intro-desktop.png);
+    height: 100vh;
   }
   .App {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .intro-component {
     display: flex;
