@@ -1,6 +1,37 @@
 import React, { useState } from "react";
 import "./Form.css";
 function Form() {
+  const [enteredFirstName, setEnteredFirstName] = useState("");
+  const [enteredLastName, setEnteredLastName] = useState("");
+  const [enteredEmailAddress, setEnteredEmailAddress] = useState("");
+  const [enteredPassword, setEnteredPassword] = useState("");
+
+  const enteredFirstNameInputHandler = (e) => {
+    setEnteredFirstName(e.target.value);
+  };
+  const enteredLastNameInputHandler = (e) => {
+    setEnteredLastName(e.target.value);
+  };
+  const enteredEmailAddressInputHandler = (e) => {
+    setEnteredEmailAddress(e.target.value);
+  };
+  const enteredPasswordInputHandler = (e) => {
+    setEnteredPassword(e.target.value);
+  };
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const signUpData = {
+      firstName: enteredFirstName,
+      lastName: enteredLastName,
+      email: enteredEmailAddress,
+      password: enteredPassword,
+    };
+    console.log(signUpData);
+    setEnteredFirstName("");
+    setEnteredLastName("");
+    setEnteredEmailAddress("");
+    setEnteredPassword("");
+  };
   return (
     <div className="form-component">
       <p className="blue">
@@ -8,31 +39,36 @@ function Form() {
       </p>
       <div className="form-wrapper">
         <div className="form">
-          <form>
+          <form onSubmit={submitHandler}>
             <input
               type="text"
-              value={0}
+              value={enteredFirstName}
               placeholder="First Name"
-              onChange={0}
+              onChange={enteredFirstNameInputHandler}
             />{" "}
             <br />
-            <input type="text" value={0} placeholder="Last Name" onChange={0} />
+            <input
+              type="text"
+              value={enteredLastName}
+              placeholder="Last Name"
+              onChange={enteredLastNameInputHandler}
+            />
             <br />
             <input
               type="email"
-              value={0}
+              value={enteredEmailAddress}
               placeholder="Email Address"
-              onChange={0}
+              onChange={enteredEmailAddressInputHandler}
             />
             <br />
             <input
               type="password"
-              value={0}
+              value={enteredPassword}
               placeholder="Password"
-              onChange={0}
+              onChange={enteredPasswordInputHandler}
             />
             <br />
-            <button className="green">
+            <button className="green" type="submit">
               <strong>CLAIM YOUR FREE TRIAL</strong>
             </button>
           </form>
