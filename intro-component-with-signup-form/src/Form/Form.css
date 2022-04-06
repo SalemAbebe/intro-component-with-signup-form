@@ -5,6 +5,7 @@
   background-color: #fff;
   border-radius: 8px;
   padding: 20px 0;
+  box-shadow: rgb(177, 171, 172) 0 -8px inset;
 }
 .form {
   border-radius: 5px;
@@ -12,7 +13,6 @@
   width: 80%;
   margin: auto;
   align-items: center;
-  /* margin-top: 20px; */
 }
 .green {
   width: 100%;
@@ -21,18 +21,28 @@
   border-radius: 5px;
   margin-top: 10px;
   color: #fff;
+  border-style: none;
+  box-shadow: inset 0 0 10px rgb(154, 166, 154);
+}
+.green:hover {
+  background-color: #dcfd73;
+  color: #000;
+  cursor: pointer;
 }
 .blue {
   background-color: hsl(248, 32%, 49%);
   border-radius: 5px;
-  padding: 10px;
+  padding: 12px;
   margin-bottom: 20px;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .red {
   color: hsl(0, 100%, 74%);
   font-size: 10px;
   font-weight: 600;
+  cursor: pointer;
 }
 .gray {
   width: 100%;
